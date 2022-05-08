@@ -1,7 +1,7 @@
 {
-  "name": "@lc-cn/ts-dev-template",
-  "version": "1.0.0",
-  "description": "ts开发环境配置",
+  "name": "oicq2-cq-enable",
+  "version": "1.0.2",
+  "description": "让oicq2.x版本支持cq码",
   "main": "lib/index.js",
   "scripts": {
     "start": "node .",
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/lc-cn/ts-dev-template#readme",
   "devDependencies": {
     "@types/node": "latest",
+    "oicq": "^2.2.2",
     "ts-node-dev": "latest",
     "tsc-alias": "latest",
     "tsconfig-paths": "latest",
@@ -37,5 +38,7 @@
     "/lib/**/*.d.ts",
     "/lib/**/LICENSE"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
