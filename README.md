@@ -7,6 +7,7 @@ npm install oicq2-cq-enable
 # 或 npm i
 ```
 2.在你的项目入口文件最开头导入依赖
+
 js
 ```javascript
 require('oicq2-cq-enable')
