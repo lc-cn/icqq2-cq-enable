@@ -4,8 +4,8 @@
 
 1.安装依赖
 ```shell
-npm install oicq2-cq-enable
-# 或 npm i
+npm install oicq2-cq-enable # 如果你使用的是npm管理依赖
+yarn add oicq2-cq-enable #  如果你使用的是yarn管理依赖
 ```
 2.在你的项目入口文件最开头导入依赖
 
