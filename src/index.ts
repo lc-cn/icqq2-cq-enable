@@ -9,6 +9,9 @@ function bindFromCqcode(target){
     const oldSendMsg=target.prototype.sendMsg
     target.prototype.sendMsg=function (content,quote){
         content=[].concat(content).map(msg=>typeof msg==='string'?fromCqcode(msg):msg).flat()
+        if(content.length===1 && content[0].type==='music'){
+            return this.shareMusic(content[0].platform,content[0].id)
+        }
         return oldSendMsg.apply(this,[content,quote])
     }
 }
