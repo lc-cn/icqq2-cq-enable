@@ -1,6 +1,6 @@
 {
   "name": "oicq2-cq-enable",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "让oicq2.x版本支持cq码",
   "main": "lib/index.js",
   "scripts": {

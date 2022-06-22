@@ -1,5 +1,6 @@
 import {Client,Group,Discuss,Friend} from "oicq";
 import {fromCqcode, toCqcode} from "@/utils";
+export {fromCqcode,toCqcode} from '@/utils'
 declare module 'oicq'{
     class Message{
         cqCode:string
