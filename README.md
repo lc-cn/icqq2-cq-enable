@@ -27,3 +27,15 @@ import {createClient} from 'oicq'
 ```
 然后，你的Client的message相关事件的event将会携带cqCode参数，
 event的reply和一切sendMsg将支持直接发送cq码
+## 消息段-CQ码互转
+### 消息段->CQ码
+fromSegment
+### CQ码->消息段
+toSegment
+## 消息-CQ码互转
+### 消息->CQ码
+toCqcode
+### CQ码->消息
+fromCqcode
+
+

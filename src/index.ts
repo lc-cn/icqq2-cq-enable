@@ -1,8 +1,8 @@
-import {Client,Group,Discuss,Friend} from "oicq";
+import {Client,Group,Discuss,Friend} from "icqq";
 import {fromCqcode, toCqcode} from "@/utils";
-export {fromCqcode,toCqcode} from '@/utils'
-declare module 'oicq'{
-    class Message{
+export {fromCqcode,toCqcode,fromSegment,toSegment} from '@/utils'
+declare module 'icqq'{
+    interface Message{
         cqCode:string
     }
 }
