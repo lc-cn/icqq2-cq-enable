@@ -1,5 +1,4 @@
 import * as querystring from "querystring";
-import lodash = require('lodash')
 import { genDmMessageId } from "icqq/lib/message/message.js";
 import {MessageElem} from "icqq";
 const mCQ = {
@@ -145,7 +144,14 @@ export function qs(text, sep = ",", equal = "=") {
 
         ret[c.substring(0, i)] = c
             .substring(i + 1)
-            .replace(new RegExp(Object.values(mCQInside).join("|"), "g"), (s) => lodash.invert(mCQInside)[s] || "");
+            .replace(new RegExp(Object.values(mCQInside).join("|"), "g"), (s) =>  {
+                for (const k in mCQInside) {
+                    if (s === mCQInside[k]) {
+                        return k;
+                    }
+                }
+                return '';
+            });
     });
 
     for (const k in ret) {

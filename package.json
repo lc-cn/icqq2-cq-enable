@@ -1,7 +1,7 @@
 {
   "name": "icqq-cq-enable",
-  "version": "1.0.0",
-  "description": "让oicq2.x版本支持cq码",
+  "version": "1.0.1",
+  "description": "让icqq.x版本支持cq码",
   "main": "lib/index.js",
   "scripts": {
     "start": "node .",
@@ -37,8 +37,7 @@
     "/lib/**/*.d.ts",
     "/lib/**/LICENSE"
   ],
-  "dependencies": {
-    "icqq": "^0.0.1",
-    "lodash": "^4.17.21"
+  "peerDependencies": {
+    "icqq": "latest"
   }
 }
