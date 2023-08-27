@@ -179,7 +179,7 @@ export function fromSegment(msgList:SegmentElem|SegmentElem[]):MessageElem[]{
     msgList=[].concat(msgList)
     return msgList.map(msg=>{
         const {type,data,...other}=msg
-        return {type,...other,...data} as MessageElem
+        return {...other,...data,type} as MessageElem
     })
 
 }
