@@ -179,7 +179,12 @@ export function fromSegment(msgList:SegmentElem|SegmentElem[]):MessageElem[]{
     msgList=[].concat(msgList)
     return msgList.map(msg=>{
         const {type,data,...other}=msg
-        return {...other,...data,type} as MessageElem
+        /**
+         * 小程序消息 msg.data 内有个同名字符串类型 data 字段, 
+         * 填充 sendGroupMsg() message 参数时此函数被调用一次，data 被解构，
+         * processMessage 时又被解构一次, 此处要避免将 data.data 给解构
+         */
+        return typeof data === 'object' ? {...other,...data,type} as MessageElem : {...other,data,type} as MessageElem
     })
 
 }
